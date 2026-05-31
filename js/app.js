@@ -1,17 +1,13 @@
-var escapeEnabled = false;
-
 // W3Schools - JavaScript Functions
 function doEffect(knop, effect) {
   // W3Schools - JavaScript HTML DOM Style
   knop.style.display = "none";
-  escapeEnabled = true;
   effect();
 }
 
 // W3Schools - JavaScript Functions
 function decoy(knop) {
   knop.style.display = "none";
-  escapeEnabled = true;
   // W3Schools - JavaScript innerHTML/textContent
   document.getElementById("bericht").textContent = "Nothing happened... or did it? 👀";
 }
@@ -56,14 +52,5 @@ function trilling() {
 
 // W3Schools - JavaScript Window Location
 function escapeRoom() {
-  if (!escapeEnabled) {
-    document.getElementById("bericht").textContent = "You need to try another button first...";
-    return;
-  }
-  var path = window.location.pathname;
-  var target = path.replace(/\/game\.html$/, '/secret.html');
-  if (target === path) {
-    target = './secret.html';
-  }
-  window.location.href = target;
+  window.location.href = "secret.html";
 }
