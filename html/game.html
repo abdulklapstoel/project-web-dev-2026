@@ -2,11 +2,13 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
   <title>Escape The Room</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
   <header>
+    <img class="logo" src="../media/original-c21c11cb425625ae1781e8faefe4f1e0.webp" alt="Escape The Room logo">
     <h1>Escape The Room</h1>
   </header>
 
@@ -15,18 +17,25 @@
     <a href="game.html">Game</a>
   </nav>
 
-  <div id="gameArea">
-    <p id="bericht">Choose a button... if you dare!</p>
+  <main>
+    <div id="gameArea">
+      <p id="bericht">Choose a button... if you dare!</p>
+      <p class="page-note">Some buttons are tricks, others are effects.</p>
 
-    <button class="gameBtn" id="btn1"><span>Button</span></button>
-    <button class="gameBtn" id="btn2"><span>Button</span></button>
-    <button class="gameBtn" id="btn3"><span>Button</span></button>
-    <button class="gameBtn" id="btn4"><span>Button</span></button>
-    <button class="gameBtn" id="btn5"><span>Button</span></button>
-    <button class="gameBtn" id="btn6"><span>Button</span></button>
+      <button class="gameBtn" id="btn1" onclick="doEffect(this, draaiOm)"><span>Spin</span></button>
+      <button class="gameBtn" id="btn2" onclick="doEffect(this, disco)"><span>Disco</span></button>
+      <button class="gameBtn" id="btn3" onclick="decoy(this)"><span>Decoy</span></button>
+      <button class="gameBtn" id="btn4" onclick="doEffect(this, spiegel)"><span>Mirror</span></button>
+      <button class="gameBtn" id="btn5" onclick="doEffect(this, trilling)"><span>Shake</span></button>
+      <button class="gameBtn" id="btn6" onclick="decoy(this)"><span>Fake</span></button>
+      <button class="gameBtn" id="btn7" onclick="decoy(this)"><span>Nothing</span></button>
+      <button class="gameBtn" id="btn8" onclick="doEffect(this, zoom)"><span>Grow</span></button>
+      <button class="gameBtn" id="btn9" onclick="decoy(this)"><span>Try</span></button>
+      <button class="gameBtn" id="btn10" onclick="decoy(this)"><span>Secret</span></button>
 
-    <button id="escapeBtn" aria-label="Escape"></button>
-  </div>
+      <button id="escapeBtn" onclick="escapeRoom()" aria-label="Escape"></button>
+    </div>
+  </main>
 
   <footer>
     <table>
