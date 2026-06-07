@@ -27,6 +27,29 @@ function draaiOm() {
 var discoInterval = null;
 var discoAan = false;
 
+var buttonEffects = {
+  btn1: draaiOm,
+  btn2: disco,
+  btn3: null,
+  btn4: spiegel,
+  btn5: trilling,
+  btn6: null,
+  btn7: null,
+  btn8: zoom,
+  btn9: null,
+  btn10: null
+};
+
+function triggerEffect(buttonId) {
+  var knop = document.getElementById(buttonId);
+  var effect = buttonEffects[buttonId];
+  if (knop && effect) {
+    doEffect(knop, effect);
+  } else if (knop) {
+    decoy(knop);
+  }
+}
+
 // W3Schools - JavaScript setInterval
 // https://www.w3schools.com/jsref/met_win_setinterval.asp
 function disco() {
@@ -74,3 +97,18 @@ function escapeRoom() {
   }
   window.location.href = "secret.html";
 }
+
+// Add event listeners after the page has loaded so HTML stays clean and no inline JS is needed
+document.addEventListener("DOMContentLoaded", function() {
+  var gameButtons = document.querySelectorAll(".gameBtn");
+  gameButtons.forEach(function(button) {
+    button.addEventListener("click", function() {
+      triggerEffect(this.id);
+    });
+  });
+
+  var escapeButton = document.getElementById("escapeBtn");
+  if (escapeButton) {
+    escapeButton.addEventListener("click", escapeRoom);
+  }
+});
