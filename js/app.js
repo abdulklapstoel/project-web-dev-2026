@@ -68,5 +68,9 @@ function trilling() {
 // W3Schools - JavaScript Window Location
 // https://www.w3schools.com/jsref/prop_win_location.asp
 function escapeRoom() {
+  if (discoAan) {
+    clearInterval(discoInterval);
+    discoAan = false;
+  }
   window.location.href = "secret.html";
 }
