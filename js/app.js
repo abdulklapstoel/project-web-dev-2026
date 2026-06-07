@@ -58,7 +58,7 @@ function disco() {
     discoAan = true;
     var i = 0;
     discoInterval = setInterval(function() {
-      document.getElementById("gameArea").style.backgroundColor = i % 2 === 0 ? "#ff0000" : "#0000ff";
+      document.getElementById("gameArea").style.background = i % 2 === 0 ? "#ff0000" : "#0000ff";
       i++;
     }, 300);
   }
