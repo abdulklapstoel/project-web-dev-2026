@@ -76,8 +76,7 @@ main .button-link:hover {
   z-index: 2;
 }
 
-/* Bron: https://uiverse.io/mi-series/wicked-sloth-7 */
-/* Aangepast: kleur #c8a951 / #1a1a1a, box-shadow, class naar .gameBtn, position absolute via ID */
+/* https://uiverse.io/mi-series/wicked-sloth-7 */
 /* W3Schools - CSS Position & Box Shadow */
 /* https://www.w3schools.com/css/css3_buttons.asp */
 /* https://www.w3schools.com/css/css3_shadows.asp */
